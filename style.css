@@ -1,0 +1,102 @@
+body{
+    background-color: rgba(205, 243, 208, 0.856);
+}
+.top{
+    text-align: center;
+    color: blueviolet;
+    border: 1px solid burlywood;
+    border-radius: 1em;
+}
+h2{
+    text-align: center;
+    color: crimson;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: cadetblue;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.h4{
+    color: rgba(255, 0, 51, 0.651);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+}
+h3{
+    color: rgba(255, 0, 51, 0.651);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.l{
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(58, 238, 22);
+}
+input{
+    border: 1.5px solid blueviolet;
+    border-radius: 1em;
+    height: 1.5rem;
+    margin-top: 1em;
+    padding-left: 2em;
+    color: chartreuse;
+}
+input:hover{
+    padding-left: 2em;
+    border: 3px solid blueviolet;
+    background-color: antiquewhite;
+}
+input:focus{
+    padding-left: 2em;
+    border: 3px solid rgb(0, 0, 0);
+    background-color: antiquewhite;
+}
+form{
+    margin-left: 0.4em;
+}
+label{
+    color: crimson;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#total{
+    border: 1px solid blueviolet;
+    margin-top: 1em;
+    height: 1.5em;
+    border-radius: 1em;
+    background-color: rgb(225, 255, 177);
+    color: chartreuse;
+}
+
+#liabilities{
+    border: 1px solid blueviolet;
+    margin-top: 1em;
+    height: 1.5em;
+    border-radius: 1em;
+    background-color: rgb(225, 255, 177);
+    color: chartreuse;
+    padding: 0.5em;
+}
+#zakahCalculated{
+    padding: 0.5em;
+    border: 1px solid blueviolet;
+    margin-top: 1em;
+    height: 1.5em;
+    border-radius: 1em;
+    background-color: rgb(225, 255, 177);
+    color: chartreuse;
+}
+#computingZakah{
+    border: 1px solid blueviolet;
+    margin-top: 1em;
+    padding: 0.5em;
+    height: 1.5em;
+    border-radius: 1em;
+    background-color: rgb(225, 255, 177);
+    color: chartreuse;
+}
+#payable{
+    padding: 0.5em;
+    border: 1px solid blueviolet;
+    margin-top: 1em;
+    height: 1.5em;
+    border-radius: 1em;
+    background-color: rgb(225, 255, 177);
+    color: chartreuse;
+}

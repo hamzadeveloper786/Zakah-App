@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zakkat Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="top">
+        <p>اَلْحَمْدُ لِلّٰہِ رَبِّ الْعٰلَمِیْنَ وَ الصَّلٰوۃُ وَالسَّلَامُ علٰی سَیِّدِ الْمُرْسَلِیْنَ ط</p>
+        <p>اَمَّا بَعْدُ فَاَعُوْذُ بِاللّٰہِ مِنَ الشَّیْطٰنِ الرَّجِیْمِ ط بِسْمِ اللہِ الرَّحْمٰنِ الرَّ حِیْم ط</p>
+    </div>
+
+    <h2>HOW TO CALCULATE ZAKAH?</h2>
+    <h2>زَکوۃ کس طرح نکا لی جا ئے؟</h2>
+
+    <p>First, determine the date on which zakat became farz upon you according to the lunar calendar. As per market
+        value on the above date, determine [and put in the below calculator] the value of all assets which you own on
+        the date set above, and on which Zakah will be calculated. Necessary assets on whose value Zakah is to be
+        calculated are given below.</p>
+    <p>سب سے پہلے زکٰوۃواجب ہونے کی قمری تاریخ کا تعین کرلیں ۔زکٰوۃواجب ہونے کی قمری /اسلامی تاریخ اِس تاریخ کو ملکیت
+        میں موجود قابل زکٰوۃاثاثوں کی مارکیٹ ریٹ کے مطابق مالیت کا تَعَیُّن درج ذیل طریقے سے کیجئے،ضروری اموالِ زکوۃ
+        کیلکولیٹر میں شامل کردئے گئے ہیں۔</p>
+
+    <h4 class="h4">Value of assets on which Zakah has to be calculated</h4>
+    <h4 class="h4">(قابلِ زکٰوۃاثا ثوں کی مالیت)</h4>
+
+    <form onchange="add(); return false">
+        <h3>Amount <br>
+            (رقم)</h3>
+        <h4 class="l">1. Gold(سونا)</h4>
+        <label for="gold">
+            Gold(سونا)
+        </label>
+        <br>
+        <input type="number" class="list" name="gold1" id="gold">
+        <br>
+        <h4 class="l">2. Silver(چاندی)</h4>
+        <label for="silver">
+            Silver(چاندی)
+        </label>
+        <br>
+        <input type="number" name="silver1" class="list" id="silver">
+        <br>
+        <h4 class="l">3. Currency(کرنسی)</h4>
+        <label for="localCurrency">
+            Local and foreign currency with current rates. (ملکی وغیرملکی کرنسی مو جودہ ر یٹ)
+        </label>
+        <br>
+        <input type="number" name="localCurrency1" class="list" id="localCurrency">
+        <br>
+        <br>
+        <label for="bankCurrency">
+            Money deposited in banks (excluding interest). بینکوں میں جمع شدہ رقم (علاوہ سود).
+        </label>
+        <br>
+        <input type="number" name="bankCurrency1" id="bankCurrency" class="list">
+        <br>
+        <br>
+        <label for="prizeBond">
+            Prize Bonds (پرائز بانڈز)
+        </label>
+        <br>
+        <input type="number" name="prizeBond1" id="prizeBond" class="list">
+        <br>
+        <br>
+        <label for="depositMoney">
+            Money deposited in provident fund. <br>
+            (پراویڈ نٹ فنڈ میں جمع شدہ رقم)
+        </label>
+        <br>
+        <input type="number" name="depositMoney1" id="depositMoney" class="list">
+        <br><br>
+        <label for="comitee">
+            Money deposited in commitee. <br>
+            (بی سی اور کمیشن میں جمع شدہ رقم)
+        </label>
+        <br>
+        <input type="number" name="comitee1" id="comitee" class="list">
+        <br><br>
+        <h4 class="l">4. Merchandise (مالِ تجارت)</h4>
+        <label for="rawMaterial">
+            Raw materials in factory etc. <br>(خام مال فیکٹری وغیرہ میں)
+        </label>
+        <br>
+        <input type="number" name="rawMaterial1" id="rawMaterial" class="list">
+        <br>
+        <br>
+        <label for="factoryGoods">
+            Manufactured goods in factory/shop etc. <br>
+            (تیار شدہ مال فیکٹری یا دکان وغیرہ میں)
+        </label>
+        <br>
+        <input type="number" name="factoryGoods1" id="factoryGoods" class="list">
+        <br>
+        <br>
+        <label for="trading">
+            Plots, houses or flats for trading. <br>
+            (تجارتی پلاٹس، مکان یا فلیٹ).
+        </label>
+        <br>
+        <input type="number" name="trading1" id="trading" class="list">
+        <br>
+        <br>
+        <label for="buisness">
+            Business partnership assets on which Zakah is to be calculated. <br> (کاروبار میں شراکت کے قابل زکٰوۃاثاثہ
+            جات)
+        </label>
+        <br>
+        <input type="number" name="buisness1" id="buisness" class="list">
+        <br>
+        <br>
+        <h4 class="l">The amount of total wealth of Zakah <br> کل مال زکٰوۃ(رقم)</h4>
+        <div id="total"></div>
+    </form>
+    <hr>
+    <form onchange="liability(); return false">
+        <h4 class="h4">AMOUNT TO BE DEDUCTED FROM TOTAL ZAKAH-ABLE WEALTH (i.e. LIABILITIES)</h4>
+        <h4 class="h4">وہ رقم جو مالِ زکوٰۃ سے الگ کرنی ہے</h4>
+        <h3>Amount <br>
+            (رقم)</h3>
+        <br>
+        <label for="loan">
+            Loan, if any (اگر قرضہ لیا ہواہے)
+        </label>
+        <br>
+        <input type="number" name="loan1" id="loan">
+        <br>
+        <br>
+        <label for="installments">Dues instalments on house, shop, things. <br>
+            (مکان، دکان اشیا ء کی واجب الاداقسطیں)
+        </label>
+        <br>
+        <input type="number" name="installments1" id="installments">
+        <br>
+        <br>
+        <label for="payableCommitee">Remaining payable amount of committee[1] (provided that one has already got the
+            total amount of the committee).
+            <br>
+            (کمیٹی کے بقایاجات جب کےیہ کمیٹی مل چکی ہو)
+        </label>
+        <br>
+        <input type="number" name="payableCommitee1" id="payableCommitee">
+        <br>
+        <br>
+        <label for="utilityBills">Utility bills such as the bills of gas, electricity etc. provided that one has got the
+            bills before the Zakah year is complete.
+            <br>
+            (یوٹیلیٹی بلز، بجلی، گیس وغیرہ اگر سال پورا ہونے سے پہلے آچکے ہوں.)
+        </label>
+        <br>
+        <input type="number" name="utilityBills1" id="utilityBills">
+        <br>
+        <br>
+        <label for="payDealer">Payables to Dealers ( پارٹیوں کی ادائیگیاں )
+        </label>
+        <br>
+        <input type="number" name="payDealer1" id="payDealer">
+        <br>
+        <br>
+        <label for="employeSalary">
+            Salaries of employees. (ملازمین کی تنخواہیں)
+        </label>
+        <br>
+        <input type="number" name="employeSalary1" id="employeSalary">
+        <br>
+        <br>
+        <label for="unpaidZakah">
+            Unpaid Zakah of the previous year. (گزشتہ سال کی زکٰوۃجو ادا نہ کی گئی ہو.)
+        </label>
+        <br>
+        <input type="number" name="unpaidZakah1" id="unpaidZakah">
+        <br>
+        <br>
+        <h4 class="l">Liabilities (منہاشدہ رقم )</h4>
+        <div id="liabilities"></div>
+        <h4 class="l">Amount on which Zakah has to be calculated (قابل زکٰوۃرقم )</h4>
+        <div id="zakahCalculated"></div>
+        <h4 class="l">Zakah-computing formula: Total amount to be divided by 40 <br>(زکٰوۃ نکالنے کافار مولا : کل رقم کو
+            40 پر تقسیم کریں)</h4>
+    </form>
+    <h2>Zakah Pyable</h2>
+    <div id="payable"></div>
+    <p id="commit1">(1) In the subcontinent, the word ‘committee’ is also used in the sense of an agreement among a
+        fixed number of individuals, called committee members, who all pay an equal amount of money each month, and the
+        total amount deposited by all members is given to only one member each month either by a lucky draw or one by
+        one in a predetermined order. This continues until all members get their full money back.</p>
+    <script src="./app.mjs"></script>
+</body>
+
+</html>
